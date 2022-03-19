@@ -31,6 +31,36 @@ main .city{
     padding: 0.3rem;
 }
 
-main .city i {
+main .city i{
     font-size: 1.5rem;
+}
+
+.explore{
+    text-align: center;
+}
+
+.explore h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.explore p{
+    font-size: 1rem;
+}
+
+.explore button{
+    color: white;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    background-image: linear-gradient( to top, rgb(191, 3, 191), rgb(255, 167, 237));
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 15px 19px -14px rgba(0,0,0,0.38);
+    transition: transform 200ms;
+    margin-top: 1rem;
+}
+
+.explore button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
 }
