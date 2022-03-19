@@ -1,9 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500&display=swap');
+
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0%;
+    font-family: "Roboto", sans-serif;
+}
+
 
 header{
-    font-family: 'Shrikhand';
+    font-family: 'Shrikhand', cursive;
     text-align: center;
-    box-shadow: 0 3px 3px 1px rgb(211, 211, 211);
-    padding: 0.5rem;
+    box-shadow: 0 3px 3px 1px lightgrey;
+    padding: 0.3rem;
+    margin: 0;
+    position: relative;
+}
+
+main .city{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem ;
+    background-color: rgb(211, 211, 211, 30%);
+    padding: 0.3rem;
+}
+
+main .city i {
+    font-size: 1.5rem;
 }
