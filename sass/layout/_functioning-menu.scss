@@ -1,0 +1,31 @@
+@import "../utils/grow-up.scss";
+@import "../utils/box-shadow.scss";
+
+.functioning-menu{
+    margin-right: 1rem;
+
+    & ol{
+        display: flex;
+        gap: 2rem;
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+    }
+
+    & h2{
+        padding: 0 1rem;
+    }
+    & li{
+        background-color: rgba(211, 211, 211, 0.3) ;
+        padding: 1rem 2rem;
+        border: 1px solid red;
+        flex-grow: 1;
+        border-radius: 10px;
+        text-align: center;
+        @include base-shadow;
+        
+        &:hover{
+            @include grow-up;
+        }
+    }
+}

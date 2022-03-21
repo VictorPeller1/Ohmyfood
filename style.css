@@ -21,35 +21,54 @@ main .city {
   justify-content: center;
   text-align: center;
   gap: 0.5rem;
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.3);
   padding: 0.3rem; }
-
-main .city i {
-  font-size: 1.5rem; }
+  main .city i {
+    font-size: 1.5rem; }
 
 .explore {
-  text-align: center; }
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.1);
+  padding-bottom: 3rem; }
+  .explore h2 {
+    margin: 0;
+    padding: 2rem 0;
+    font-size: 2rem; }
+  .explore p {
+    font-size: 1rem; }
+  .explore button {
+    color: white;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(to top, #bf03bf, #ffa7ed);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
+    transition: transform 200ms;
+    padding-top: 1rem; }
+  .explore button:hover {
+    transform: scale(1.02);
+    opacity: 0.9; }
 
-.explore h2 {
-  margin-top: 2rem;
-  font-size: 2rem; }
-
-.explore p {
-  font-size: 1rem; }
-
-.explore button {
-  color: white;
-  font-weight: 300;
-  padding: 1rem 2rem;
-  background-image: linear-gradient(to top, #bf03bf, #ffa7ed);
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
-  transition: transform 200ms;
-  margin-top: 1rem; }
-
-.explore button:hover {
-  transform: scale(1.02);
-  opacity: 0.9; }
+.functioning-menu {
+  margin-right: 1rem; }
+  .functioning-menu ol {
+    display: flex;
+    gap: 2rem; }
+    @media (max-width: 767px) {
+      .functioning-menu ol {
+        flex-direction: column; } }
+  .functioning-menu h2 {
+    padding: 0 1rem; }
+  .functioning-menu li {
+    background-color: rgba(211, 211, 211, 0.3);
+    padding: 1rem 2rem;
+    border: 1px solid red;
+    flex-grow: 1;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
+    .functioning-menu li:hover {
+      transform: scale(1.03); }
 
 /*# sourceMappingURL=style.css.map */
