@@ -52,23 +52,35 @@ main .city {
 
 .functioning-menu {
   margin-right: 1rem; }
-  .functioning-menu ol {
-    display: flex;
-    gap: 2rem; }
-    @media (max-width: 767px) {
-      .functioning-menu ol {
-        flex-direction: column; } }
   .functioning-menu h2 {
     padding: 0 1rem; }
-  .functioning-menu li {
-    background-color: rgba(211, 211, 211, 0.3);
-    padding: 1rem 2rem;
-    border: 1px solid red;
-    flex-grow: 1;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
-    .functioning-menu li:hover {
-      transform: scale(1.03); }
+  .functioning-menu ol {
+    padding-left: 15px;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem; }
+    @media (max-width: 1030px) {
+      .functioning-menu ol {
+        flex-direction: column; } }
+    .functioning-menu ol li {
+      background-color: rgba(211, 211, 211, 0.13);
+      padding: 1rem 2rem;
+      flex-grow: 1;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
+      .functioning-menu ol li span {
+        padding: 0.4rem 0.65rem;
+        color: white;
+        background-color: #bf03bf;
+        border-radius: 30px;
+        position: relative;
+        left: -40px; }
+      .functioning-menu ol li i.fa-solid {
+        position: relative;
+        left: -20px;
+        color: darkgrey; }
+      .functioning-menu ol li:hover {
+        transform: scale(1.03); }
 
 /*# sourceMappingURL=style.css.map */

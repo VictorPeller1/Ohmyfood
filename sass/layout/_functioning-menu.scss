@@ -1,31 +1,46 @@
-@import "../utils/grow-up.scss";
 @import "../utils/box-shadow.scss";
+@import "../utils/grow-up.scss";
+@import "../layout/colors.scss";
 
 .functioning-menu{
     margin-right: 1rem;
 
-    & ol{
-        display: flex;
-        gap: 2rem;
-        @media (max-width:767px) {
-            flex-direction: column;
-        }
-    }
-
-    & h2{
+    h2{
         padding: 0 1rem;
     }
-    & li{
-        background-color: rgba(211, 211, 211, 0.3) ;
-        padding: 1rem 2rem;
-        border: 1px solid red;
-        flex-grow: 1;
-        border-radius: 10px;
-        text-align: center;
-        @include base-shadow;
-        
-        &:hover{
-            @include grow-up;
+    
+    & ol{
+        padding-left: 15px;
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+        @media (max-width:1030px) {
+            flex-direction: column;
         }
+        & li{
+            background-color: rgba(211, 211, 211, 0.13) ;
+            padding: 1rem 2rem;
+            flex-grow: 1;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            @include base-shadow;
+            & span{
+                padding: 0.4rem 0.65rem;
+                color: white;
+                background-color: rgb(191, 3, 191);
+                border-radius: 30px;
+                position: relative;
+                left: -40px;
+            }
+            & i.fa-solid{
+                
+                position: relative;
+                left: -20px;
+                color: $f-icons-color;    
+            }
+            &:hover{
+                @include grow-up;
+            }
+        }   
     }
 }
