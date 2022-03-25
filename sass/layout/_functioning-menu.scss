@@ -1,24 +1,19 @@
 @import "../utils/box-shadow.scss";
 @import "../utils/grow-up.scss";
-@import "../layout/colors.scss";
+@import "../utils/variables.scss";
 
 .functioning-menu{
-    margin-right: 1rem;
-
-    h2{
-        padding: 0 1rem;
-    }
     
     & ol{
         padding-left: 15px;
         list-style-type: none;
         display: flex;
         gap: 1rem;
-        @media (max-width:1030px) {
+        @media (max-width:$breakpoint) {
             flex-direction: column;
         }
         & li{
-            background-color: rgba(211, 211, 211, 0.13) ;
+            background-color: $main-primary-color;
             padding: 1rem 2rem;
             flex-grow: 1;
             border-radius: 10px;
@@ -27,7 +22,7 @@
             & span{
                 padding: 0.4rem 0.65rem;
                 color: white;
-                background-color: rgb(191, 3, 191);
+                background-color: $primary-color;
                 border-radius: 30px;
                 position: relative;
                 left: -40px;
@@ -36,10 +31,11 @@
                 
                 position: relative;
                 left: -20px;
-                color: $f-icons-color;    
+                color: $main-strong-color;    
             }
             &:hover{
                 @include grow-up;
+                background-color: rgba(184, 101, 211, 0.2);
             }
         }   
     }

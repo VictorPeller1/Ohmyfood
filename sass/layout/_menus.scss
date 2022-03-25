@@ -1,0 +1,55 @@
+@import "../utils/variables.scss";
+@import "../utils/colors";
+
+.menus{
+    background-color: $main-primary-color;
+    
+    
+    h2{
+        margin-top: 70px;
+    }
+    .menus__cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @media (max-width:$breakpoint) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .new{
+            position: relative;
+        }
+        .new::before {
+            content: "nouveau";
+            position: absolute; /* parent=relative -> child=absolute */
+            height: 2rem;
+            width: 5rem;
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, 50%);
+            display: grid;
+            place-items:center;
+            top: 1.5rem;
+            right: 1.5rem;
+            
+            
+        }
+    }
+    
+    .card{
+        
+      
+        &__image{
+            border: 1px solid black;
+            height: 15rem;
+            border-radius: 3rem;
+            background-size: cover; 
+            /* have to use this property with css background img, object fit only available for html insert img */   
+        }
+
+        @for $i from 1 through 4 {
+            &__image-#{$i}{
+                background-image: url(../../Assets/menu-#{$i}.jpg);
+            }
+        }
+    }
+}
+

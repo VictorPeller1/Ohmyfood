@@ -1,10 +1,12 @@
+@import "../utils/variables.scss";
+
 main .city{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 0.5rem ;
-    background-color: rgba(211, 211, 211, 0.3);
+    background-color: $main-strong-color;
     padding: 0.3rem;
     & i{
         font-size: 1.5rem;

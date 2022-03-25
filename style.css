@@ -7,28 +7,41 @@ body {
   margin: 0%;
   font-family: "Roboto", sans-serif; }
 
+main {
+  padding: 0 7rem; }
+
+h2 {
+  padding: 2rem 0;
+  margin: 1rem; }
+
 header {
   font-family: 'Shrikhand', cursive;
   text-align: center;
-  box-shadow: 0 3px 3px 1px lightgrey;
+  box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
   padding: 0.3rem;
   margin: 0;
   position: relative; }
 
+/* MAIN COLORS */
+/* BREAKPOINTS */
 main .city {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 0.5rem;
-  background-color: rgba(211, 211, 211, 0.3);
+  background-color: rgba(0, 0, 0, 0.077);
   padding: 0.3rem; }
   main .city i {
     font-size: 1.5rem; }
 
+/* MAIN COLORS */
+/* BREAKPOINTS */
+/* BACKGROUND COLORS */
+/* BUTTONS AND :: COLORS */
 .explore {
   text-align: center;
-  background-color: rgba(211, 211, 211, 0.1);
+  background-color: rgba(211, 211, 211, 0.2);
   padding-bottom: 3rem; }
   .explore h2 {
     margin: 0;
@@ -40,7 +53,7 @@ main .city {
     color: white;
     font-weight: 300;
     padding: 1rem 2rem;
-    background-image: linear-gradient(to top, #bf03bf, #ffa7ed);
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
     border: none;
     border-radius: 30px;
     box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
@@ -50,37 +63,85 @@ main .city {
     transform: scale(1.02);
     opacity: 0.9; }
 
-.functioning-menu {
-  margin-right: 1rem; }
-  .functioning-menu h2 {
-    padding: 0 1rem; }
-  .functioning-menu ol {
-    padding-left: 15px;
-    list-style-type: none;
-    display: flex;
-    gap: 1rem; }
-    @media (max-width: 1030px) {
-      .functioning-menu ol {
-        flex-direction: column; } }
-    .functioning-menu ol li {
-      background-color: rgba(211, 211, 211, 0.13);
-      padding: 1rem 2rem;
-      flex-grow: 1;
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
-      .functioning-menu ol li span {
-        padding: 0.4rem 0.65rem;
-        color: white;
-        background-color: #bf03bf;
-        border-radius: 30px;
-        position: relative;
-        left: -40px; }
-      .functioning-menu ol li i.fa-solid {
-        position: relative;
-        left: -20px;
-        color: darkgrey; }
-      .functioning-menu ol li:hover {
-        transform: scale(1.03); }
+/* MAIN COLORS */
+/* BREAKPOINTS */
+.functioning-menu ol {
+  padding-left: 15px;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem; }
+  @media (max-width: 1000px) {
+    .functioning-menu ol {
+      flex-direction: column; } }
+  .functioning-menu ol li {
+    background-color: rgba(211, 211, 211, 0.2);
+    padding: 1rem 2rem;
+    flex-grow: 1;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
+    .functioning-menu ol li span {
+      padding: 0.4rem 0.65rem;
+      color: white;
+      background-color: #9356DC;
+      border-radius: 30px;
+      position: relative;
+      left: -40px; }
+    .functioning-menu ol li i.fa-solid {
+      position: relative;
+      left: -20px;
+      color: rgba(0, 0, 0, 0.077); }
+    .functioning-menu ol li:hover {
+      transform: scale(1.03);
+      background-color: rgba(184, 101, 211, 0.2); }
+
+/* MAIN COLORS */
+/* BREAKPOINTS */
+/* BACKGROUND COLORS */
+/* BUTTONS AND :: COLORS */
+.menus {
+  background-color: rgba(211, 211, 211, 0.2); }
+  .menus h2 {
+    margin-top: 70px; }
+  .menus .menus__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; }
+    @media (max-width: 1000px) {
+      .menus .menus__cards {
+        grid-template-columns: repeat(1, 1fr); } }
+    .menus .menus__cards .new {
+      position: relative; }
+    .menus .menus__cards .new::before {
+      content: "nouveau";
+      position: absolute;
+      /* parent=relative -> child=absolute */
+      height: 2rem;
+      width: 5rem;
+      background-color: #99E2D0;
+      color: #1b6150;
+      display: grid;
+      place-items: center;
+      top: 1.5rem;
+      right: 1.5rem; }
+  .menus .card__image {
+    border: 1px solid black;
+    height: 15rem;
+    border-radius: 3rem;
+    background-size: cover;
+    /* have to use this property with css background img, object fit only available for html insert img */ }
+  .menus .card__image-1 {
+    background-image: url(../../Assets/menu-1.jpg); }
+  .menus .card__image-2 {
+    background-image: url(../../Assets/menu-2.jpg); }
+  .menus .card__image-3 {
+    background-image: url(../../Assets/menu-3.jpg); }
+  .menus .card__image-4 {
+    background-image: url(../../Assets/menu-4.jpg); }
+
+/* MAIN COLORS */
+/* BREAKPOINTS */
+/* BACKGROUND COLORS */
+/* BUTTONS AND :: COLORS */
 
 /*# sourceMappingURL=style.css.map */

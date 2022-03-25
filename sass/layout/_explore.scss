@@ -1,8 +1,10 @@
 @import "../utils/box-shadow";
+@import "../utils/variables.scss";
+@import "../utils/_colors.scss";
 
 .explore{
     text-align: center;
-    background-color: rgba(211, 211, 211, 10%);
+    background-color: $main-primary-color;
     padding-bottom: 3rem;
 
     & h2{
@@ -19,7 +21,7 @@
         color: white;
         font-weight: 300;
         padding: 1rem 2rem;
-        background-image: linear-gradient( to top, rgb(191, 3, 191), rgb(255, 167, 237));
+        background-image: linear-gradient( to top, $primary-color, $secondary-color);
         border: none;
         border-radius: 30px;
         @include base-shadow;
