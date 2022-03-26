@@ -1,0 +1,14 @@
+footer{
+    padding-left: 2rem;
+    height: 15rem;
+    background-color: $footer-background;
+    h2{
+        font-family: "shrikhand", "sans-serif";
+        color: white;
+        font-weight: 500;
+        margin: 0;
+    }
+    p, a{
+        color: white;
+    }
+}

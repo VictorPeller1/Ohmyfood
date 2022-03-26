@@ -2,6 +2,7 @@
 @import "../utils/variables.scss";
 @import "../utils/_colors.scss";
 
+
 .explore{
     text-align: center;
     background-color: $main-primary-color;
@@ -21,7 +22,8 @@
         color: white;
         font-weight: 300;
         padding: 1rem 2rem;
-        background-image: linear-gradient( to top, $primary-color, $secondary-color);
+        margin-top: 30px;
+        background-image: linear-gradient(to top, $primary-color, $secondary-color);
         border: none;
         border-radius: 30px;
         @include base-shadow;

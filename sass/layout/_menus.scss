@@ -1,9 +1,11 @@
 @import "../utils/variables.scss";
 @import "../utils/colors";
 
+
+
 .menus{
     background-color: $main-primary-color;
-    
+    padding-bottom: 80px;
     
     h2{
         margin-top: 70px;
@@ -11,7 +13,7 @@
     .menus__cards{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 3rem;
         @media (max-width:$breakpoint) {
             grid-template-columns: repeat(1, 1fr);
         }
@@ -35,14 +37,16 @@
     }
     
     .card{
-        
+        border-radius: 2rem ;
+        background-color: white;
+        @include base-shadow;
       
         &__image{
-            border: 1px solid black;
             height: 15rem;
-            border-radius: 3rem;
+            border-radius: 2rem 2rem 0 0;
             background-size: cover; 
-            /* have to use this property with css background img, object fit only available for html insert img */   
+            /* have to use this property with css background img, 
+            object fit only available for html insert img */   
         }
 
         @for $i from 1 through 4 {
@@ -50,6 +54,37 @@
                 background-image: url(../../Assets/menu-#{$i}.jpg);
             }
         }
+
+        &__description{
+            position: relative;
+            
+            
+            h3,p{
+                margin: 0.5rem;
+                margin-left: 1rem;
+            }
+
+            i {
+                font-size: 2rem;
+                position: absolute;
+                right: 1rem;
+                top: 50%; /* half height parent */
+                transform: translateY(-50%); /* half Y-size element */
+            }
+            .fa-solid{
+                color: transparent;
+                background-image: linear-gradient(to top,$primary-color, $secondary-color);
+                background-clip: text ;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms;
+                &:hover.fa-solid{
+                    opacity: 1;
+                }
+            }
+            
+        }
+        
     }
 }
 
