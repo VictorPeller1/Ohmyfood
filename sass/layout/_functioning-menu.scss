@@ -13,6 +13,7 @@
             flex-direction: column;
         }
         & li{
+            white-space: nowrap; // words stay on the same line in responsive
             background-color: $main-primary-color;
             padding: 1rem 2rem;
             flex-grow: 1;

@@ -1,0 +1,46 @@
+.banner img{
+    display: block;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;   
+}
+
+.resto_main{
+    position: relative;
+    margin-top: -3rem;
+    border-radius: 2rem 2rem 0 0;
+    background: $solid-opacity;
+    h2{
+        font-family: "shrikhand", sans-serif;
+        @media (min-width:$breakpoint) {
+            text-align: center;
+        }   
+    }
+    i {
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        bottom: 2.5rem;
+        }
+        .fa-solid{
+            color: transparent;
+            background-image: linear-gradient(to top,$primary-color, $secondary-color);
+            background-clip: text ;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms;
+            &:hover.fa-solid{
+            opacity: 1;
+            }
+        }        
+}
+
+    
+   
+        
+        
+        
+
+
+
