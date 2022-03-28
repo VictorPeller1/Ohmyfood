@@ -1,5 +1,6 @@
-@import "../utils/variables.scss";
 @import "../utils/colors";
+@import "../utils/variables";
+@import "../utils/mixins";
 
 
 
@@ -30,9 +31,7 @@
             display: grid;
             place-items:center;
             top: 1.5rem;
-            right: 1.5rem;
-            
-            
+            right: 1.5rem; 
         }
     }
     

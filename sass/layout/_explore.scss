@@ -1,7 +1,6 @@
-@import "../utils/box-shadow";
-@import "../utils/variables.scss";
-@import "../utils/_colors.scss";
-
+@import "../utils/colors";
+@import "../utils/variables";
+@import "../utils/mixins";
 
 .explore{
     text-align: center;

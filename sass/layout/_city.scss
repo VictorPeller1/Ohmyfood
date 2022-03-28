@@ -1,5 +1,7 @@
-@import "../utils/variables.scss";
 @import "../utils/colors";
+@import "../utils/variables";
+@import "../utils/mixins";
+
 
 main .city{
     display: flex;

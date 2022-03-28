@@ -21,6 +21,9 @@ h2 {
 h3, p {
   margin: 0; }
 
+/* BACKGROUND COLORS */
+/* BUTTONS AND :: COLORS */
+/* BREAKPOINTS */
 header {
   font-family: 'Shrikhand', cursive;
   text-align: center;
@@ -29,9 +32,9 @@ header {
   margin: 0;
   position: relative; }
 
-/* BREAKPOINTS */
 /* BACKGROUND COLORS */
 /* BUTTONS AND :: COLORS */
+/* BREAKPOINTS */
 main .city {
   display: flex;
   align-items: center;
@@ -43,9 +46,9 @@ main .city {
   main .city i {
     font-size: 1.5rem; }
 
-/* BREAKPOINTS */
 /* BACKGROUND COLORS */
 /* BUTTONS AND :: COLORS */
+/* BREAKPOINTS */
 .explore {
   text-align: center;
   background-color: rgba(211, 211, 211, 0.2);
@@ -71,6 +74,8 @@ main .city {
     transform: scale(1.02);
     opacity: 0.9; }
 
+/* BACKGROUND COLORS */
+/* BUTTONS AND :: COLORS */
 /* BREAKPOINTS */
 .functioning-menu ol {
   padding-left: 15px;
@@ -102,9 +107,9 @@ main .city {
       transform: scale(1.03);
       background-color: rgba(184, 101, 211, 0.2); }
 
-/* BREAKPOINTS */
 /* BACKGROUND COLORS */
 /* BUTTONS AND :: COLORS */
+/* BREAKPOINTS */
 .menus {
   background-color: rgba(211, 211, 211, 0.2);
   padding-bottom: 80px; }
@@ -175,6 +180,9 @@ main .city {
 /* BREAKPOINTS */
 /* BACKGROUND COLORS */
 /* BUTTONS AND :: COLORS */
+/* BACKGROUND COLORS */
+/* BUTTONS AND :: COLORS */
+/* BREAKPOINTS */
 footer {
   padding-left: 2rem;
   height: 15rem;
