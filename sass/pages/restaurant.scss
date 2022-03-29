@@ -11,7 +11,11 @@
     margin-top: -3rem;
     border-radius: 2rem 2rem 0 0;
     background: $solid-opacity;
+
     h2{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
         font-family: "shrikhand", sans-serif;
         @media (min-width:$breakpoint) {
             text-align: center;
@@ -36,6 +40,90 @@
         }        
 }
 
+.main-restaurant{
+    padding: 0 2rem;
+    background: $solid-opacity;
+    height: 100vh;
+
+    h3{
+        padding: 2rem 0;
+    }
+
+    .menu{
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        @media (max-width:$breakpoint) {
+            grid-template-columns: repeat(1,1fr);
+        }
+        
+        & > *{
+            background: white;
+        }
+        .menu_category{
+            border-radius: 1rem;
+            
+            .menu-item{
+                display: flex;
+                overflow: hidden;
+                gap: 0.5rem; //space between price and animation
+                @include base-shadow;
+                
+                
+                .menu-item_description{
+                    padding: 1rem;
+                }
+
+                .menu-item_animation{
+                    display: grid;
+                    place-items: center;
+                    $button-width: 4rem;
+                    background: $tertiary-color;
+                    border-radius: 0 1rem 1rem 0;
+                    margin-right: -$button-width;
+                    width: $button-width;
+                    transition: all 300ms;
+                    & i{
+                        display: grid;
+                        color: $tertiary-color;
+                        background-color: white;
+                        border-radius: 50%;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        place-items: center;
+                        font-weight: bold;
+                    }
+                }
+                &:hover {
+                    .menu-item_animation{
+                        margin: 0%;
+                    }
+                    i{
+                        animation: rotation 0.5s;
+                    }
+                }
+
+                &_description{
+
+                    h4{
+                        padding: 0;
+                    }
+                }
+                
+                .price{
+                    margin-left: auto;
+                    font-weight: bold;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                
+            }
+        }
+    }    
+}
     
    
         
