@@ -50,7 +50,7 @@
     }
 
     .menu{
-        
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
@@ -62,18 +62,28 @@
         & > *{
             background: white;
         }
+        
         .menu_category{
             border-radius: 1rem;
+
+            overflow: hidden;
+
             
             .menu-item{
                 display: flex;
-                overflow: hidden;
-                gap: 0.5rem; //space between price and animation
-                @include base-shadow;
+                gap: 0.5rem; // space between price and animation
                 
+                @include base-shadow;
                 
                 .menu-item_description{
                     padding: 1rem;
+                    overflow: hidden;
+ 
+                    h4, p{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis; // " ... "
+                    }
                 }
 
                 .menu-item_animation{
@@ -97,11 +107,12 @@
                     }
                 }
                 &:hover {
+                    
                     .menu-item_animation{
                         margin: 0%;
                     }
                     i{
-                        animation: rotation 0.5s;
+                        animation: rotation 0.5s ease-in-out;
                     }
                 }
 
