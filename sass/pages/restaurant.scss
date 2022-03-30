@@ -6,13 +6,14 @@
     object-position: center;   
 }
 
-.resto_main{
+.resto__main{
     position: relative;
     margin-top: -3rem;
     border-radius: 2rem 2rem 0 0;
     background: $solid-opacity;
 
     h2{
+        margin-left: 17px;
         padding-top: 2rem;
         padding-bottom: 2rem;
         padding-left: 1rem;
@@ -21,6 +22,7 @@
             text-align: center;
         }   
     }
+    
     i {
         font-size: 2rem;
         position: absolute;
@@ -43,7 +45,8 @@
 .main-restaurant{
     padding: 0 2rem;
     background: $solid-opacity;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 3rem;
 
     h3{
         padding: 2rem 0;
@@ -61,23 +64,26 @@
         
         & > *{
             background: white;
+            @include soft-shadow;
         }
         
-        .menu_category{
+        .menu__category{
             border-radius: 1rem;
 
             overflow: hidden;
 
             
             .menu-item{
-                display: flex;
-                gap: 0.5rem; // space between price and animation
+                display: flex;                
+                overflow: hidden;
+                       
                 
-                @include base-shadow;
-                
-                .menu-item_description{
+                .menu-item__description{
                     padding: 1rem;
                     overflow: hidden;
+                   
+
+                    
  
                     h4, p{
                         overflow: hidden;
@@ -86,7 +92,8 @@
                     }
                 }
 
-                .menu-item_animation{
+                .menu-item__animation{
+                    flex-shrink: 0; // fix position span price
                     display: grid;
                     place-items: center;
                     $button-width: 4rem;
@@ -108,7 +115,7 @@
                 }
                 &:hover {
                     
-                    .menu-item_animation{
+                    .menu-item__animation{
                         margin: 0%;
                     }
                     i{
@@ -116,7 +123,7 @@
                     }
                 }
 
-                &_description{
+                &__description{
 
                     h4{
                         padding: 0;

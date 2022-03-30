@@ -207,38 +207,40 @@ footer {
   object-fit: cover;
   object-position: center; }
 
-.resto_main {
+.resto__main {
   position: relative;
   margin-top: -3rem;
   border-radius: 2rem 2rem 0 0;
   background: #F6F6F6; }
-  .resto_main h2 {
+  .resto__main h2 {
+    margin-left: 17px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 1rem;
     font-family: "shrikhand", sans-serif; }
     @media (min-width: 1000px) {
-      .resto_main h2 {
+      .resto__main h2 {
         text-align: center; } }
-  .resto_main i {
+  .resto__main i {
     font-size: 2rem;
     position: absolute;
     right: 1rem;
     bottom: 2.5rem; }
-  .resto_main .fa-solid {
+  .resto__main .fa-solid {
     color: transparent;
     background-image: linear-gradient(to top, #9356DC, #FF79DA);
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
     transition: all 200ms; }
-    .resto_main .fa-solid:hover.fa-solid {
+    .resto__main .fa-solid:hover.fa-solid {
       opacity: 1; }
 
 .main-restaurant {
   padding: 0 2rem;
   background: #F6F6F6;
-  height: 100vh; }
+  height: auto;
+  padding-bottom: 3rem; }
   .main-restaurant h3 {
     padding: 2rem 0; }
   .main-restaurant .menu {
@@ -249,22 +251,23 @@ footer {
       .main-restaurant .menu {
         grid-template-columns: repeat(1, 1fr); } }
     .main-restaurant .menu > * {
-      background: white; }
-    .main-restaurant .menu .menu_category {
+      background: white;
+      box-shadow: 1px 6px 20px -2px rgba(0, 0, 0, 0.05); }
+    .main-restaurant .menu .menu__category {
       border-radius: 1rem;
       overflow: hidden; }
-      .main-restaurant .menu .menu_category .menu-item {
+      .main-restaurant .menu .menu__category .menu-item {
         display: flex;
-        gap: 0.5rem;
-        box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
-        .main-restaurant .menu .menu_category .menu-item .menu-item_description {
+        overflow: hidden; }
+        .main-restaurant .menu .menu__category .menu-item .menu-item__description {
           padding: 1rem;
           overflow: hidden; }
-          .main-restaurant .menu .menu_category .menu-item .menu-item_description h4, .main-restaurant .menu .menu_category .menu-item .menu-item_description p {
+          .main-restaurant .menu .menu__category .menu-item .menu-item__description h4, .main-restaurant .menu .menu__category .menu-item .menu-item__description p {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis; }
-        .main-restaurant .menu .menu_category .menu-item .menu-item_animation {
+        .main-restaurant .menu .menu__category .menu-item .menu-item__animation {
+          flex-shrink: 0;
           display: grid;
           place-items: center;
           background: #99E2D0;
@@ -272,7 +275,7 @@ footer {
           margin-right: -4rem;
           width: 4rem;
           transition: all 300ms; }
-          .main-restaurant .menu .menu_category .menu-item .menu-item_animation i {
+          .main-restaurant .menu .menu__category .menu-item .menu-item__animation i {
             display: grid;
             color: #99E2D0;
             background-color: white;
@@ -281,13 +284,13 @@ footer {
             width: 1.5rem;
             place-items: center;
             font-weight: bold; }
-        .main-restaurant .menu .menu_category .menu-item:hover .menu-item_animation {
+        .main-restaurant .menu .menu__category .menu-item:hover .menu-item__animation {
           margin: 0%; }
-        .main-restaurant .menu .menu_category .menu-item:hover i {
+        .main-restaurant .menu .menu__category .menu-item:hover i {
           animation: rotation 0.5s ease-in-out; }
-        .main-restaurant .menu .menu_category .menu-item_description h4 {
+        .main-restaurant .menu .menu__category .menu-item__description h4 {
           padding: 0; }
-        .main-restaurant .menu .menu_category .menu-item .price {
+        .main-restaurant .menu .menu__category .menu-item .price {
           margin-left: auto;
           font-weight: bold;
           padding: 1rem;
