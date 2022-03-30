@@ -49,7 +49,18 @@
     padding-bottom: 3rem;
 
     h3{
+        position: relative;
         padding: 2rem 0;
+        font-weight: 400;
+        &::after {
+            position: absolute;
+            content: "";
+            height: 0.2rem;
+            width: 2.5rem;
+            top: 3.5rem;
+            left: 0rem;
+            background-color: $tertiary-color;
+        }
     }
 
     .menu{
@@ -93,7 +104,7 @@
                 }
 
                 .menu-item__animation{
-                    flex-shrink: 0; // fix position span price
+                    flex-shrink: 0; // <--shrink forbidden, fix dimensions span price
                     display: grid;
                     place-items: center;
                     $button-width: 4rem;
@@ -140,7 +151,17 @@
                 
             }
         }
-    }    
+    }
+    .order {
+    
+        & button{
+        
+            display: flex;
+            @include base-button; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
     
    
