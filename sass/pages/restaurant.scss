@@ -93,12 +93,19 @@
         }
         
         .menu__category{
+            $max-childs: 3;
+            @for $i from 1 through $max-childs {
+                &:nth-child(#{$i}) {
+                   animation-delay: 100ms *$i;
+                }
+            }
             border-radius: 1rem;
-
             overflow: hidden;
-
+            animation: appear 0.5s;
+            animation-fill-mode: both;
             
             .menu-item{
+                
                 display: flex;                
                 overflow: hidden;
                 &:hover{

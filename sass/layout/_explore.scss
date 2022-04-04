@@ -27,3 +27,44 @@
         opacity: 0.9;
     }
 }
+
+.loader{
+    $animation-duration: 2s;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    position: fixed; // z-index rules disable with "static" default position value
+    background-color: whitesmoke;
+    height: 100vh;
+    inset: 0; // = 4 properties-> top bottom left right;
+    opacity: 0.9;
+    animation: disappear 300ms;
+    animation-fill-mode: both; //set beginning and ending animation;
+    animation-delay: $animation-duration;
+    transform-origin: top;
+    & i{
+        animation: spin $animation-duration ease-in-out;
+        color: $tertiary-color;
+    }
+}
+
+@keyframes disappear {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(-360deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+}

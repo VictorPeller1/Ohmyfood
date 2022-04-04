@@ -1,4 +1,4 @@
-@keyframes rotation {
+@keyframes rotation {   //check child menu list
     0%{
         transform: rotate(-360deg);
     }
@@ -6,3 +6,15 @@
         transform: rotate(0deg);
     }
 }
+
+@keyframes appear {  // appear child menu list
+    0%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
