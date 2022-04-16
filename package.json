@@ -4,7 +4,8 @@
   "description": "Openclassrooms projet n°3 \"Ohmyfood\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss:style.css"
+    "sass": "sass --watch style.scss:style.css",
+    "build": "postcss style.css --use autoprefixer cssnano -o ./build/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/VictorPeller1/Ohmyfood#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.49.9"
   }
 }

@@ -29,14 +29,16 @@
                 left: -40px;
             }
             & i.fa-solid{
-                
                 position: relative;
                 left: -20px;
-                color: $main-strong-color;    
+                color: $main-strong-color; 
             }
             &:hover{
                 @include grow-up;
                 background-color: rgba(184, 101, 211, 0.2);
+                i.fa-solid{
+                    color: $primary-color;
+                }
             }
         }   
     }

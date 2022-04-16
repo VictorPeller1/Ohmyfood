@@ -135,6 +135,8 @@ main .city {
     .functioning-menu ol li:hover {
       transform: scale(1.03);
       background-color: rgba(184, 101, 211, 0.2); }
+      .functioning-menu ol li:hover i.fa-solid {
+        color: #9356DC; }
 
 /* BACKGROUND COLORS */
 /* BUTTONS AND :: COLORS */
