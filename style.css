@@ -180,13 +180,13 @@ main .city {
       /* have to use this property with css background img, 
       object fit only available for html insert img */ }
     .menus .card__image-1 {
-      background-image: url(../../assets/menu-1.png); }
+      background-image: url(../Ohmyfood/assets/menu-1.jpg); }
     .menus .card__image-2 {
-      background-image: url(../../assets/menu-2.png); }
+      background-image: url(../Ohmyfood/assets/menu-2.jpg); }
     .menus .card__image-3 {
-      background-image: url(../../assets/menu-3.png); }
+      background-image: url(../Ohmyfood/assets/menu-3.jpg); }
     .menus .card__image-4 {
-      background-image: url(../../assets/menu-4.png); }
+      background-image: url(../Ohmyfood/assets/menu-4.jpg); }
     .menus .card__description {
       position: relative; }
       .menus .card__description h3, .menus .card__description p {
