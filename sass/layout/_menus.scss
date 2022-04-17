@@ -52,7 +52,7 @@
 
         @for $i from 1 through 4 {
             &__image-#{$i}{
-                background-image: url(https://github.com/VictorPeller1/Ohmyfood/blob/main/Assets/menu-#{$i}.jpg);
+                background-image: url(/Assets/menu-#{$i}.jpg);
             }
         }
 
