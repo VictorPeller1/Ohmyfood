@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VictorPeller1/Ohmyfood.git"
+    "url": "git+https://github.com/VictorPeller1/ohmyfood.git"
   },
   "author": "Victor Pellerin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VictorPeller1/Ohmyfood/issues"
+    "url": "https://github.com/VictorPeller1/ohmyfood/issues"
   },
-  "homepage": "https://github.com/VictorPeller1/Ohmyfood#readme",
+  "homepage": "https://github.com/VictorPeller1/ohmyfood#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "cssnano": "^5.1.7",
