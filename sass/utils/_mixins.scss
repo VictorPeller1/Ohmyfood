@@ -1,6 +1,7 @@
 
 @mixin grow-up { 
-    transform: scale(1.03);    
+    transform: scale(1.03);
+    transition: 0.2s;    
 }
 
 @mixin base-shadow {

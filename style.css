@@ -78,14 +78,14 @@ main .city {
 .loader {
   display: grid;
   place-items: center;
-  z-index: 1;
-  position: fixed;
+  z-index: 1; /* which element should be upper than the others */
+  position: fixed; /* is positioned relative to the viewport */
   background-color: whitesmoke;
   height: 100vh;
-  inset: 0;
+  inset: 0; /* set child dimensions from the parent ( 4 values from top ) */
   opacity: 0.9;
   animation: disappear 300ms;
-  animation-fill-mode: both;
+  animation-fill-mode: both; /* set what's happening at the end of the animation */
   animation-delay: 2s;
   transform-origin: top; }
   .loader i {
