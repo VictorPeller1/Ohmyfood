@@ -1,203 +1,205 @@
-#resto-page header::before {
-    @include return-home;
-    content: "\f060";
-    left: 1rem;
-    //border: 1px solid black;
-    top: 50%; /* half height parent */
-    transform: translateY(-50%); /* half Y-size element */
-    width: 2rem;
-    font-size: 28px;
-}
-
-.banner img{
-    display: block;
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
-    object-position: center;   
-}
-
-.resto__main{
-    position: relative;
-    margin-top: -3rem;
-    border-radius: 2rem 2rem 0 0;
-    background: $solid-opacity;
-
-    h2{
-        //font-size: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 1rem;
-        font-family: "shrikhand", sans-serif;
-        @media (min-width:$breakpoint) {
-            text-align: center;
-        }
-        @media (max-width:$breakpoint) {
-            margin-left: 10px;
-            
-        }   
-    }
+#resto-page{
     
-    i {
-        font-size: 2rem;
-        position: absolute;
-        right: 1rem;
-        bottom: 2.5rem;
-        }
-        .fa-solid{
-            color: transparent;
-            background-image: linear-gradient(to top,$primary-color, $secondary-color);
-            background-clip: text ;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 200ms;
-            &:hover.fa-solid{
-            opacity: 1;
-            }
-        }        
-}
+    #resto-page header::before {
+        @include return-home; // ::before in mixin
+        left: 1rem;
+        //border: 1px solid black;
+        top: 50%; /* half height parent */
+        transform: translateY(-50%); /* half Y-size element */
+        width: 2rem;
+        font-size: 28px;
+    }
 
-.main-restaurant{
-    padding: 0 1rem;
-    background: $solid-opacity;
-    height: auto;
-    padding-bottom: 3rem;
+    .banner img{
+        display: block;
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: center;   
+    }
 
-    h3{
+    .resto__main{
         position: relative;
-        padding: 2rem 0;
-        font-weight: 400;
-        &::after {
+        margin-top: -3rem;
+        border-radius: 2rem 2rem 0 0;
+        background: $solid-opacity;
+
+        h2{
+            //font-size: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            font-family: "shrikhand", sans-serif;
+            @media (min-width:$breakpoint) {
+                text-align: center;
+                font-size: 2rem;
+            }
+            @media (max-width:$breakpoint) {
+                margin-left: 10px;
+
+            }   
+        }
+
+        i {
+            font-size: 2rem;
             position: absolute;
-            content: "";
-            height: 0.2rem;
-            width: 2.5rem;
-            top: 3.5rem;
-            left: 0rem;
-            background-color: $tertiary-color;
-        }
+            right: 1rem;
+            bottom: 2.5rem;
+            }
+            .fa-solid{
+                color: transparent;
+                background-image: linear-gradient(to top,$primary-color, $secondary-color);
+                background-clip: text ;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms;
+                &:hover.fa-solid{
+                opacity: 1;
+                }
+            }        
     }
 
-    .menu{
+    .main-restaurant{
+        padding: 0 1rem;
+        background: $solid-opacity;
+        height: auto;
+        padding-bottom: 3rem;
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-
-        @media (max-width:$breakpoint) {
-            grid-template-columns: repeat(1,1fr);
-        }
-        
-        & > *{
-            background: white;
-            @include soft-shadow;
-        }
-        
-        .menu__category{
-            $max-childs: 3;
-            @for $i from 1 through $max-childs {
-                &:nth-child(#{$i}) {
-                   animation-delay: 100ms *$i;
-                }
+        h3{
+            position: relative;
+            padding: 2rem 0;
+            font-weight: 400;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 0.2rem;
+                width: 2.5rem;
+                top: 3.5rem;
+                left: 0rem;
+                background-color: $tertiary-color;
             }
-            border-radius: 1rem;
-            overflow: hidden;
-            animation: appear 0.5s;
-            animation-fill-mode: both;
-            
-            .menu-item{
-                
-                display: flex;                
+        }
+
+        .menu{
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+
+            @media (max-width:$breakpoint) {
+                grid-template-columns: repeat(1,1fr);
+            }
+
+            & > *{
+                background: white;
+                @include soft-shadow;
+            }
+
+            .menu__category{
+                $max-childs: 3;
+                @for $i from 1 through $max-childs {
+                    &:nth-child(#{$i}) {
+                       animation-delay: 100ms *$i;
+                    }
+                }
+                border-radius: 1rem;
                 overflow: hidden;
-                &:hover{
-                    cursor: pointer;
-                }
-                       
-                
-                .menu-item__description{
-                    padding: 1rem;
+                animation: appear 0.5s;
+                animation-fill-mode: both;
+
+                .menu-item{
+
+                    display: flex;                
                     overflow: hidden;
-                   
+                    &:hover{
+                        cursor: pointer;
+                    }
 
-                    
- 
-                    h4, p{
+
+                    .menu-item__description{
+                        padding: 1rem;
                         overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis; // " ... "
-                    }
-                }
-
-                .menu-item__animation{
-                    flex-shrink: 0; // <--shrink forbidden, fix dimensions span price
-                    display: grid;
-                    place-items: center;
-                    $button-width: 4rem;
-                    background: $tertiary-color;
-                    border-radius: 0 1rem 1rem 0;
-                    margin-right: -$button-width;
-                    width: $button-width;
-                    transition: all 300ms;
-                    & i{
-                        display: grid;
-                        color: $tertiary-color;
-                        background-color: white;
-                        border-radius: 50%;
-                        height: 1.5rem;
-                        width: 1.5rem;
-                        place-items: center;
-                        font-weight: bold;
-                    }
-                }
-                &:hover {
                     
+
+
+                    
+                        h4, p{
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis; // " ... "
+                        }
+                    }
+
                     .menu-item__animation{
-                        margin: 0%;
+                        flex-shrink: 0; // <--shrink forbidden, fix dimensions span price
+                        display: grid;
+                        place-items: center;
+                        $button-width: 4rem;
+                        background: $tertiary-color;
+                        border-radius: 0 1rem 1rem 0;
+                        margin-right: -$button-width;
+                        width: $button-width;
+                        transition: all 300ms;
+                        & i{
+                            display: grid;
+                            color: $tertiary-color;
+                            background-color: white;
+                            border-radius: 50%;
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            place-items: center;
+                            font-weight: bold;
+                        }
                     }
-                    i{
-                        animation: rotation 0.5s ease-in-out;
-                    }
-                }
+                    &:hover {
 
-                &__description{
-
-                    h4{
-                        padding: 0;
+                        .menu-item__animation{
+                            margin: 0%;
+                        }
+                        i{
+                            animation: rotation 0.5s ease-in-out;
+                        }
                     }
+
+                    &__description{
+
+                        h4{
+                            padding: 0;
+                        }
+                    }
+
+                    .price{
+                        margin-left: auto;
+                        font-weight: bold;
+                        padding: 1rem;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+
                 }
-                
-                .price{
-                    margin-left: auto;
-                    font-weight: bold;
-                    padding: 1rem;
-                    display: flex;
-                    align-items: flex-end;
-                }
-                
             }
         }
-    }
-    .order {
-        margin: 60px 0;
-        & button{
-            font-size: 1.1rem;
-            display: flex;
-            @include base-button; 
-            margin-left: auto;
-            margin-right: auto;
-        }
-        & button:hover{
-            transform: scale(1.02);
-            opacity: 0.9;
-            cursor: pointer;
+        .order {
+            margin: 60px 0;
+            & button{
+                font-size: 1.1rem;
+                display: flex;
+                @include base-button; 
+                margin-left: auto;
+                margin-right: auto;
+            }
+            & button:hover{
+                transform: scale(1.02);
+                opacity: 0.9;
+                cursor: pointer;
+            }
         }
     }
 }
     
-   
-        
-        
-        
+
+
+
 
 
 
