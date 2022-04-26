@@ -1,3 +1,30 @@
+// LOADER KEYFRAMES
+
+@keyframes disappear {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(-360deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+}
+
+///////////////////////////
+
+// MENU LIST ON RESTAURANT PAGE  
+
 @keyframes rotation {   //check child menu list
     0%{
         transform: rotate(-360deg);

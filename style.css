@@ -1,404 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500&display=swap");
-*, ::before, ::after {
-  box-sizing: border-box; }
+/*
+Error: File to import not found or unreadable: Ohmyfood/sass/layout/base.scss.
+        on line 1 of style.scss
 
-* a {
-  text-decoration: none;
-  color: black; }
+1: @import "Ohmyfood/sass/layout/base.scss";
+2: @import "Ohmyfood/sass/layout/header.scss";
+3: @import "Ohmyfood/sass/layout/city.scss";
+4: @import "Ohmyfood/sass/layout/explore.scss";
+5: @import "Ohmyfood/sass/layout/functioning-menu.scss";
+6: @import "Ohmyfood/sass/layout/menus";
 
-body {
-  margin: 0%;
-  font-family: "Roboto", sans-serif; }
-
-h2, h3, h4, h5, h6 {
-  padding: 0;
-  margin: 0; }
-
-p {
-  margin: 0; }
-
-.menus, .functioning-menu {
-  padding: 0 1rem; }
-
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BREAKPOINTS */
-header {
-  font-family: 'Shrikhand', cursive;
-  text-align: center;
-  box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
-  padding: 0.3rem;
-  margin: 0;
-  position: relative; }
-
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BREAKPOINTS */
-main .city {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.077);
-  padding: 2.3rem; }
-  main .city i {
-    font-size: 1.5rem; }
-
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BREAKPOINTS */
-.explore {
-  text-align: center;
-  background-color: rgba(211, 211, 211, 0.2);
-  padding-bottom: 3rem;
-  margin-bottom: 40px; }
-  .explore h2 {
-    margin: 0;
-    padding: 2rem 0;
-    font-size: 2rem; }
-  .explore p {
-    font-size: 1rem; }
-  .explore button {
-    color: white;
-    font-weight: 300;
-    padding: 1rem 2rem;
-    margin-top: 40px;
-    background-image: linear-gradient(to top, #9356DC, #FF79DA);
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
-    transition: transform 200ms;
-    padding-top: 1rem; }
-  .explore button:hover {
-    transform: scale(1.02);
-    opacity: 0.9; }
-
-.loader {
-  display: grid;
-  place-items: center;
-  z-index: 1; /* which element should be upper than the others */
-  position: fixed; /* is positioned relative to the viewport */
-  background-color: whitesmoke;
-  height: 100vh;
-  inset: 0; /* set child dimensions from the parent ( 4 values from top ) */
-  opacity: 0.9;
-  animation: disappear 300ms;
-  animation-fill-mode: both; /* set what's happening at the end of the animation */
-  animation-delay: 2s;
-  transform-origin: top; }
-  .loader i {
-    animation: spin 2s ease-in-out;
-    color: #99E2D0; }
-
-@keyframes disappear {
-  from {
-    transform: scale(1); }
-  to {
-    transform: scale(0); } }
-@keyframes spin {
-  from {
-    transform: rotate(-360deg); }
-  to {
-    transform: rotate(360deg); } }
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BREAKPOINTS */
-.functioning-menu ol {
-  padding-left: 15px;
-  list-style-type: none;
-  display: flex;
-  gap: 1rem; }
-  @media (max-width: 1000px) {
-    .functioning-menu ol {
-      flex-direction: column; } }
-  .functioning-menu ol li {
-    white-space: nowrap;
-    background-color: rgba(211, 211, 211, 0.2);
-    padding: 1rem 2rem;
-    flex-grow: 1;
-    border-radius: 10px;
-    padding: 1.5rem 2rem;
-    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
-    .functioning-menu ol li span {
-      padding: 0.4rem 0.65rem;
-      color: white;
-      background-color: #9356DC;
-      border-radius: 30px;
-      position: relative;
-      left: -40px; }
-    .functioning-menu ol li i.fa-solid {
-      position: relative;
-      left: -20px;
-      color: rgba(0, 0, 0, 0.077); }
-    .functioning-menu ol li:hover {
-      transform: scale(1.03);
-      background-color: rgba(184, 101, 211, 0.2); }
-      .functioning-menu ol li:hover i.fa-solid {
-        color: #9356DC; }
-
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BREAKPOINTS */
-.menus {
-  background-color: rgba(211, 211, 211, 0.2);
-  padding-bottom: 80px; }
-  .menus h2 {
-    margin-top: 70px;
-    padding-top: 3rem;
-    padding-bottom: 1rem; }
-  .menus .menus__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem; }
-    @media (max-width: 1000px) {
-      .menus .menus__cards {
-        grid-template-columns: repeat(1, 1fr); } }
-    .menus .menus__cards .new {
-      position: relative; }
-    .menus .menus__cards .new::before {
-      content: "nouveau";
-      position: absolute;
-      /* parent=relative -> child=absolute */
-      height: 2rem;
-      width: 5rem;
-      background-color: #99E2D0;
-      color: #1b6150;
-      display: grid;
-      place-items: center;
-      top: 1.5rem;
-      right: 1.5rem; }
-  .menus .card {
-    border-radius: 2rem;
-    background-color: white;
-    box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38); }
-    .menus .card__image {
-      height: 15rem;
-      border-radius: 2rem 2rem 0 0;
-      background-size: cover;
-      /* have to use this property with css background img, 
-      object fit only available for html insert img */ }
-    .menus .card__image-1 {
-      background-image: url(https://victorpeller1.github.io/Ohmyfood/Assets/menu-1.jpg); }
-    .menus .card__image-2 {
-      background-image: url(https://victorpeller1.github.io/Ohmyfood/Assets/menu-2.jpg); }
-    .menus .card__image-3 {
-      background-image: url(https://victorpeller1.github.io/Ohmyfood/Assets/menu-3.jpg); }
-    .menus .card__image-4 {
-      background-image: url(https://victorpeller1.github.io/Ohmyfood/Assets/menu-4.jpg); }
-    .menus .card__description {
-      position: relative; }
-      .menus .card__description h3, .menus .card__description p {
-        margin: 0.5rem;
-        margin-left: 1rem; }
-      .menus .card__description i {
-        font-size: 2rem;
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        /* half height parent */
-        transform: translateY(-50%);
-        /* half Y-size element */ }
-      .menus .card__description .fa-solid {
-        color: transparent;
-        background-image: linear-gradient(to top, #9356DC, #FF79DA);
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 200ms; }
-        .menus .card__description .fa-solid:hover.fa-solid {
-          opacity: 1; }
-
-/* BREAKPOINTS */
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BACKGROUND COLORS */
-/* BUTTONS AND :: COLORS */
-/* BREAKPOINTS */
-footer {
-  padding-top: 40px;
-  padding-left: 2rem;
-  height: 12rem;
-  background-color: rgba(17, 17, 17, 0.85); }
-  footer h2 {
-    font-family: "shrikhand", "sans-serif";
-    color: white;
-    font-weight: 500;
-    margin: 0; }
-  footer p, footer a {
-    color: white; }
-
-#resto-page header::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\060";
-  position: absolute;
-  content: "\f060";
-  left: 1rem;
-  top: 50%;
-  /* half height parent */
-  transform: translateY(-50%);
-  /* half Y-size element */
-  width: 2rem;
-  font-size: 28px; }
-
-.banner img {
-  display: block;
-  width: 100%;
-  height: 40vh;
-  object-fit: cover;
-  object-position: center; }
-
-.resto__main {
-  position: relative;
-  margin-top: -3rem;
-  border-radius: 2rem 2rem 0 0;
-  background: #F6F6F6; }
-  .resto__main h2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    font-family: "shrikhand", sans-serif; }
-    @media (min-width: 1000px) {
-      .resto__main h2 {
-        text-align: center; } }
-    @media (max-width: 1000px) {
-      .resto__main h2 {
-        margin-left: 10px; } }
-  .resto__main i {
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-    bottom: 2.5rem; }
-  .resto__main .fa-solid {
-    color: transparent;
-    background-image: linear-gradient(to top, #9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 200ms; }
-    .resto__main .fa-solid:hover.fa-solid {
-      opacity: 1; }
-
-.main-restaurant {
-  padding: 0 1rem;
-  background: #F6F6F6;
-  height: auto;
-  padding-bottom: 3rem; }
-  .main-restaurant h3 {
-    position: relative;
-    padding: 2rem 0;
-    font-weight: 400; }
-    .main-restaurant h3::after {
-      position: absolute;
-      content: "";
-      height: 0.2rem;
-      width: 2.5rem;
-      top: 3.5rem;
-      left: 0rem;
-      background-color: #99E2D0; }
-  .main-restaurant .menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem; }
-    @media (max-width: 1000px) {
-      .main-restaurant .menu {
-        grid-template-columns: repeat(1, 1fr); } }
-    .main-restaurant .menu > * {
-      background: white;
-      box-shadow: 1px 6px 20px -2px rgba(0, 0, 0, 0.05); }
-    .main-restaurant .menu .menu__category {
-      border-radius: 1rem;
-      overflow: hidden;
-      animation: appear 0.5s;
-      animation-fill-mode: both; }
-      .main-restaurant .menu .menu__category:nth-child(1) {
-        animation-delay: 100ms; }
-      .main-restaurant .menu .menu__category:nth-child(2) {
-        animation-delay: 200ms; }
-      .main-restaurant .menu .menu__category:nth-child(3) {
-        animation-delay: 300ms; }
-      .main-restaurant .menu .menu__category .menu-item {
-        display: flex;
-        overflow: hidden; }
-        .main-restaurant .menu .menu__category .menu-item:hover {
-          cursor: pointer; }
-        .main-restaurant .menu .menu__category .menu-item .menu-item__description {
-          padding: 1rem;
-          overflow: hidden; }
-          .main-restaurant .menu .menu__category .menu-item .menu-item__description h4, .main-restaurant .menu .menu__category .menu-item .menu-item__description p {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis; }
-        .main-restaurant .menu .menu__category .menu-item .menu-item__animation {
-          flex-shrink: 0;
-          display: grid;
-          place-items: center;
-          background: #99E2D0;
-          border-radius: 0 1rem 1rem 0;
-          margin-right: -4rem;
-          width: 4rem;
-          transition: all 300ms; }
-          .main-restaurant .menu .menu__category .menu-item .menu-item__animation i {
-            display: grid;
-            color: #99E2D0;
-            background-color: white;
-            border-radius: 50%;
-            height: 1.5rem;
-            width: 1.5rem;
-            place-items: center;
-            font-weight: bold; }
-        .main-restaurant .menu .menu__category .menu-item:hover .menu-item__animation {
-          margin: 0%; }
-        .main-restaurant .menu .menu__category .menu-item:hover i {
-          animation: rotation 0.5s ease-in-out; }
-        .main-restaurant .menu .menu__category .menu-item__description h4 {
-          padding: 0; }
-        .main-restaurant .menu .menu__category .menu-item .price {
-          margin-left: auto;
-          font-weight: bold;
-          padding: 1rem;
-          display: flex;
-          align-items: flex-end; }
-  .main-restaurant .order {
-    margin: 60px 0; }
-    .main-restaurant .order button {
-      font-size: 1.1rem;
-      display: flex;
-      color: white;
-      font-weight: 300;
-      padding: 1rem 2rem;
-      margin-top: 40px;
-      background-image: linear-gradient(to top, #9356DC, #FF79DA);
-      border: none;
-      border-radius: 30px;
-      box-shadow: 0px 15px 19px -14px rgba(0, 0, 0, 0.38);
-      transition: transform 200ms;
-      padding-top: 1rem;
-      margin-left: auto;
-      margin-right: auto; }
-    .main-restaurant .order button:hover {
-      transform: scale(1.02);
-      opacity: 0.9;
-      cursor: pointer; }
-
-@keyframes rotation {
-  0% {
-    transform: rotate(-360deg); }
-  100% {
-    transform: rotate(0deg); } }
-@keyframes appear {
-  0% {
-    transform: translateY(-50%);
-    opacity: 0; }
-  100% {
-    transform: translateY(0%);
-    opacity: 1; } }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+style.scss:1
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: Ohmyfood/sass/layout/base.scss.\A         on line 1 of style.scss\A \A 1: @import \"Ohmyfood/sass/layout/base.scss\";\A 2: @import \"Ohmyfood/sass/layout/header.scss\";\A 3: @import \"Ohmyfood/sass/layout/city.scss\";\A 4: @import \"Ohmyfood/sass/layout/explore.scss\";\A 5: @import \"Ohmyfood/sass/layout/functioning-menu.scss\";\A 6: @import \"Ohmyfood/sass/layout/menus\";"; }

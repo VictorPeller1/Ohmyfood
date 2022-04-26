@@ -1,6 +1,6 @@
 #resto-page{
     
-    #resto-page header::before {
+    header::before {
         @include return-home; // ::before in mixin
         left: 1rem;
         //border: 1px solid black;
