@@ -45,18 +45,19 @@
             position: absolute;
             right: 1rem;
             bottom: 2.5rem;
+        }
+
+        .fa-solid{
+            color: transparent;
+            background-image: linear-gradient(to top,$primary-color, $secondary-color);
+            background-clip: text ;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms;
+            &:hover.fa-solid{
+            opacity: 1;
             }
-            .fa-solid{
-                color: transparent;
-                background-image: linear-gradient(to top,$primary-color, $secondary-color);
-                background-clip: text ;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms;
-                &:hover.fa-solid{
-                opacity: 1;
-                }
-            }        
+        }        
     }
 
     .main-restaurant{
@@ -110,7 +111,7 @@
                 .menu-item{
 
                     display: flex;                
-                    overflow: hidden;
+                    overflow: hidden; //hide what is out
                     &:hover{
                         cursor: pointer;
                     }
@@ -120,11 +121,8 @@
                         padding: 1rem;
                         overflow: hidden;
                     
-
-
-                    
                         h4, p{
-                            overflow: hidden;
+                            overflow: hidden; //hide what is out
                             white-space: nowrap;
                             text-overflow: ellipsis; // " ... "
                         }
@@ -156,6 +154,7 @@
                         .menu-item__animation{
                             margin: 0%;
                         }
+                        
                         i{
                             animation: rotation 0.5s ease-in-out;
                         }
@@ -175,7 +174,6 @@
                         display: flex;
                         align-items: flex-end;
                     }
-
                 }
             }
         }
